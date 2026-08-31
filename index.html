@@ -18,8 +18,8 @@
             <ul id="navbar">
                 <li> <a href="index.html">Home</a></li>
                 <li> <a href="about.html">About</a></li>
-                <li> <a href="">Services</a></li>
-                <li> <a href="">Portfolio</a></li>
+                <li> <a href="Services.html">Services</a></li>
+                <li> <a href="./Portfolio.html">Portfolio</a></li>
                 <li> <a href="">Team</a></li>
                 <li> <a href="">Pricing</a></li>
                 <li> <a href="">Testimonials</a></li>
@@ -30,10 +30,11 @@
 
             <div class="right-side">
                 <input type="text" placeholder="Search Products" class="search-box">
-                <a href="#">
+                <a href="#" title="Shopping Cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                <i class="fa-solid fa-moon" id="theme-btn"></i>
+                <i class="fa-solid fa-moon" id="theme-btn" title="Toggle Light/Dark Theme"></i>
+                <i class="fa-solid fa-circle-half-stroke" id="grayscale-btn" title="Toggle Black & White Mode"></i>
             </div>
 
 
@@ -49,20 +50,8 @@
             <p class="hero-para">Discover the latest laptops, smartphones,
                 headphones, smart watches and accessories
                 at the best prices with premium quality.</p>
-            <!-- From Uiverse.io by imtausef -->
-            <button class="button">
-                <div class="blob1"></div>
-                <div class="blob2"></div>
-                <div class="inner">Shop Now</div>
-            </button>
-            <button class="button">
-                <div class="blob1"></div>
-                <div class="blob2"></div>
-                <div class="inner">Learn More</div>
-            </button>
-
-            <!-- <button class="hero-btn">Shop Now</button>
-<button  class="hero-btn">Learn More</button> -->
+            <button class="button primary-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="button secondary-btn">Learn More</button>
         </div>
     </section>
     <!--Hero Section End-->
@@ -84,7 +73,8 @@
 
         <div class="card-main-div">
             <div class="card">
-                <img src="./Pictures/laptop1.png" alt="">
+                <span class="card-badge">Sale</span>
+                <img src="./Pictures/laptop1.png" alt="Gaming Laptop">
                 <h3 class="card-head">Gaming Laptop</h3>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
@@ -99,15 +89,10 @@
                 <button class="card-btn">
                     <span> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </span>
                 </button>
-
-
-
-
-
-                <!-- <button  class="card-btn">Add to cart</button> -->
             </div>
             <div class="card">
-                <img src="./Pictures/smartwatch.png" alt="">
+                <span class="card-badge new">New</span>
+                <img src="./Pictures/smartwatch.png" alt="Smart Watch Pro X">
                 <h3 class="card-head">Smart Watch Pro X</h3>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
@@ -117,15 +102,15 @@
                     <i class="fa-solid fa-star"></i>
                     <span>(4.9)</span>
                 </div>
-                <p class="card-para">1.96" AMOLED Display
-                    Heart Rate | GPS</p>
+                <p class="card-para">1.96" AMOLED Display | Heart Rate | GPS</p>
                 <h4 class="card-head2">$299</h4>
                 <button class="card-btn">
                     <span> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </span>
                 </button>
             </div>
             <div class="card">
-                <img src="./Pictures/headphones.png" alt="">
+                <span class="card-badge">Sale</span>
+                <img src="./Pictures/headphones.png" alt="Sony WH-1000XM5">
                 <h3 class="card-head">Sony WH-1000XM5</h3>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
@@ -135,15 +120,15 @@
                     <i class="fa-solid fa-star"></i>
                     <span>(4.9)</span>
                 </div>
-                <p class="card-para">Noise Cancelling
-                    30 Hours Battery</p>
+                <p class="card-para">Noise Cancelling | 30 Hours Battery</p>
                 <h4 class="card-head2">$199</h4>
                 <button class="card-btn">
                     <span> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </span>
                 </button>
             </div>
             <div class="card">
-                <img src="./Pictures/speaker.png" alt="">
+                <span class="card-badge new">New</span>
+                <img src="./Pictures/speaker.png" alt="Echo Smart Speaker">
                 <h3 class="card-head">Echo Smart Speaker</h3>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
@@ -153,8 +138,7 @@
                     <i class="fa-solid fa-star"></i>
                     <span>(4.7)</span>
                 </div>
-                <p class="card-para">360° HD Sound
-                    Voice Assistant</p>
+                <p class="card-para">360° HD Sound | Voice Assistant</p>
                 <h4 class="card-head2">$179</h4>
                 <button class="card-btn">
                     <span> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </span>
@@ -170,9 +154,49 @@
             <p class="choose-para1">Trusted Electronics for Everyone</p>
 
             <div class="box-container">
+                <div class="b1">
+                    <div class="icon1-div">
+                        <i class="fa-solid fa-truck-fast icon1"></i>
+                    </div>
+                    <h2 class="b1-h2">Fast & Free Delivery</h2>
+                    <p class="b1-para">Enjoy fast and reliable delivery right to your doorstep, with free shipping on
+                        eligible orders
+                        across Pakistan.</p>
+                    <button class="learn-btn">Learn more <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="b1">
+                    <div class="icon2-div">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h2 class="b1-h2">Quality Warranty</h2>
+                    <p class="b1-para">We provide quality products and offer a warranty for after-sales support, with free shipping on
+                        eligible orders across Pakistan.</p>
+                    <button class="learn-btn">Learn more <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="b1">
+                    <div class="icon3-div">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <h2 class="b1-h2">Secure Payment</h2>
+                    <p class="b1-para">Multiple secure payment options to ensure a smooth shopping experience., with free shipping on
+                        eligible orders across Pakistan.</p>
+                         <button class="learn-btn">Learn more <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="b1">
+                    <div class="icon4-div">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h2 class="b1-h2">Secure Payment</h2>
+                    <p class="b1-para">Multiple secure payment options to ensure a smooth shopping experience., with free shipping on
+                        eligible orders across Pakistan.</p>
+                         <button class="learn-btn">Learn more <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- 
+            <div class="box-container">
                 <div class="Choose-box">
                     <div>
-                        <i class="fa-solid fa-truck-fast icons2"></i>
+                         <i class="fa-solid fa-truck-fast icons2"></i> 
                         <h3 class="shipping">Shipping Warranty</h3>
                     </div>
                 </div>
@@ -184,17 +208,17 @@
                     <i class="fa-solid fa-credit-card icon4"></i>
                     <h3 class="payment">Payment</h3>
                 </div>
-                <div class="Choose-box">
+                <div class="Choose-box last-box">
                     <i class="fa-solid fa-headset icon5"></i>
                     <h3 class="support">Support</h3>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </section>
 
     <footer class="footer">
-        <hr class="line">
+        
         <!--Footer Container-->
         <div class="footer-container">
 
@@ -245,7 +269,7 @@
             <i class="fa-brands fa-x-twitter socials"></i>
             <i class="fa-brands fa-youtube socials"></i>
         </div>
-<hr class="hr2">
+        <hr class="hr2">
         <div class="copy">
             <p>© 2026 ElectroHub. All Rights Reserved.</p>
         </div>
