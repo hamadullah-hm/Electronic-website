@@ -1,149 +1,859 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroHub - Our Portfolio & Tech Showcase</title>
+    <meta
+      name="description"
+      content="Explore ElectroHub's flagship electronics portfolio. Discover cutting-edge laptops, smartphones, high-fidelity audio, smart wearables, cameras, and enterprise tech builds."
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-</head>
+  <body>
+    <!-- Ultra Modern Cyber Preloader Start -->
+    <div id="preloader">
+      <div class="preloader-backdrop"></div>
+      <div class="preloader-content">
+        <div class="loader-visual">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+          <div class="core-glow"></div>
+          <div class="core-icon">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+        </div>
 
-<body>
+        <div class="loader-brand">
+          <h2 class="loader-logo">Electro<span>Hub</span></h2>
+          <p class="loader-status" id="loader-status">Initializing Tech Experience<span class="dots"></span></p>
+        </div>
+
+        <div class="loader-progress-wrapper">
+          <div class="loader-progress-bar">
+            <div class="loader-progress-fill" id="loader-progress-fill"></div>
+          </div>
+          <div class="loader-counter">
+            <span id="loader-percentage">0</span>%
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ultra Modern Cyber Preloader End -->
+
     <!--Header Section Start-->
     <header id="header">
-        <h1 class="head1">Electro<span class="hub-class">Hub</span></h1>
-        <nav class="main-nav">
-            <ul id="navbar">
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="about.html">About</a></li>
-                <li> <a href="./Services.html">Services</a></li>
-                <li> <a href="./Portfolio.html">Portfolio</a></li>
-                <li> <a href="">Team</a></li>
-                <li> <a href="">Pricing</a></li>
-                <li> <a href="">Testimonials</a></li>
-                <li> <a href="">FAQ</a></li>
-                <li> <a href="">Contact</a></li>
+      <h1 class="head1">Electro<span class="hub-class">Hub</span></h1>
+      <nav class="main-nav">
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="./Services.html">Services</a></li>
+          <li><a href="./Portfolio.html">Portfolio</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Pricing</a></li>
+          <li><a href="">Testimonials</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
 
-            </ul>
-
-            <div class="right-side">
-                <input type="text" placeholder="Search Products" class="search-box">
-                <a href="#" title="Shopping Cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-                <i class="fa-solid fa-moon" id="theme-btn" title="Toggle Light/Dark Theme"></i>
-                <i class="fa-solid fa-circle-half-stroke" id="grayscale-btn" title="Toggle Black & White Mode"></i>
-            </div>
-
-
-        </nav>
+        <div class="right-side">
+          <input type="text" placeholder="Search Products" class="search-box" />
+          <a href="#" title="Shopping Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <i
+            class="fa-solid fa-circle-half-stroke"
+            id="grayscale-btn"
+            title="Toggle Black & White Mode"
+          ></i>
+        </div>
+      </nav>
     </header>
     <!--Header End-->
-    <!--Hero Section start-->
 
+    <!--Hero Section start-->
     <section id="hero-section3">
-        <div>
-            <div class="text-content2">
-                <!-- <h3 class="hero-head3">Future Tech</h3> -->
-                <h2 class="hero-head2">Our <span id="span3"> Portfolio</span></h2>
-                <p class="hero-para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, nihil molestiaebr
-                    corrupti repudiandae <br> quaerat iure tenetur illum quasi! Soluta, debitis fugit! Quod esse quo
-                    enim. Lorem ipsum dolor sit amet.</p>
+      <div class="hero-backdrop-overlay"></div>
+      <div class="hero3-container">
+        <div class="text-content2">
+          <div class="hero-badge">
+            <i class="fa-solid fa-sparkles"></i> Flagship Showcase 2026
+          </div>
+          <h2 class="hero-head2">
+            Our Elite <span id="span3">Portfolio</span>
+          </h2>
+          <p class="hero-para2">
+            Immerse yourself in our curated ecosystem of next-generation gadgets,
+            high-performance workstations, and premium sound systems engineered for perfection.
+          </p>
+          <div class="hero-stats-pill">
+            <div class="pill-item">
+              <i class="fa-solid fa-microchip"></i>
+              <span>Next-Gen Tech</span>
             </div>
+            <div class="pill-divider"></div>
+            <div class="pill-item">
+              <i class="fa-solid fa-shield-check"></i>
+              <span>100% Genuine</span>
+            </div>
+            <div class="pill-divider"></div>
+            <div class="pill-item">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Instant Dispatch</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!--Hero Section End-->
 
-    <section id="featured-section">
-        <div class="featured-head">
-            <h2>Our <span id="span4">Featured</span> Products</h2>
+    <!-- Live Counter Metric Strip -->
+    <section class="portfolio-metrics-section">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+          <div class="metric-info">
+            <h3 class="counter" data-target="150">0</h3>
+            <p>Premium Products</p>
+          </div>
         </div>
-        <div class="buttons-div">
-            
-                <button class="buttons btn1">All</button>
-                <button  class="buttons">Laptops</button>
-                <button  class="buttons">SmartPhones</button>
-                <button  class="buttons">Audio</button>
-                <button  class="buttons">Accessories</button>
-                <button  class="buttons">Cameras</button>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="metric-info">
+            <h3 class="counter" data-target="45000">0</h3>
+            <p>Happy Customers</p>
+          </div>
         </div>
-        
-        <div class="boxes-container">
-            <div class="box image">
-                
-                    <img src="./Pictures/premium_sleek_aluminum_laptop_for_professionals_high_end_design_studio_lighting.png" alt="">
-                    <div class="box-content1">
-               <h2>Premium Laptop</h2>
-               <p class="box-para1">High Perfomance laptop for Professionls and games</p>
-               <p class="price">Rs 59.999</p>
-               <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <span class="rating-span">4.8(120)</span>
-               </div>
-               <button class="box1-btn">View Detials &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                   <i class="fa-solid fa-arrow-right"></i>
-               </button>
-               <!-- <p class="rating">
-                <i class="fa-solid fa-star"></i>
-                4.8(120)
-               </p> -->
-               </div>
-            </div>
-            <div class="box">
-                <img src="./Pictures/Mobile.png" alt="">
-
-                <div  class="box-content1">
-                 <h2>Smartphone Pro</h2>
-                 <p  class="box-para1">Latest smartphone with advanced features.</p>
-                 <p class="price">Rs 69.999</p>
-                 <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <span class="rating-span">4.9(95)</span>
-               </div>
-               <button class="box1-btn">View Detials &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                   <i class="fa-solid fa-arrow-right"></i>
-               </button>
-                </div>
-            </div>
-            <div class="box">
-                <img src="./Pictures/headphone.png" alt="">
-                <h2 class="box3-head">Wireless Headphone</h2>
-                <p class="box-para1 box3">High Quality sound with comfortable design.</p>
-                <p class="price price2">Rs 35.999</p>
-                <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <span class="rating-span">4.9(95)</span>
-               </div>
-               <button class="box1-btn btn1">View Detials &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                   <i class="fa-solid fa-arrow-right"></i>
-               </button>
-            </div>
-            <div class="box">
-                <img src="./Pictures/watch.png" alt="">
-                <h2 class="box3-head">Smart Watch</h2>
-                <p class="box-para1 box3">Stay connected, track your fitness, and enjoy smart features wherever you go. </p>
-                <p class="price price2"> Rs 3499</p>
-                 <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                 <span class="rating-span">4.9(95)</span> 
-               </div>
-               
-                <button class="box1-btn">View Detials &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                   <i class="fa-solid fa-arrow-right"></i>
-               </button>
-            </div>
-            <div class="box">
-                <img src="./Pictures/Bluetooth.png" alt="">
-            </div> 
-            <div class="box"></div>
-
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <div class="metric-info">
+            <h3 class="counter" data-target="850">0</h3>
+            <p>Custom Builds Completed</p>
+          </div>
         </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="metric-info">
+            <h3 class="counter" data-target="99">0</h3>
+            <p>Satisfaction Rate (%)</p>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
 
+    <!--Featured Portfolio Products Section-->
+    <section id="featured-section">
+      <div class="featured-head">
+        <span class="sub-heading-badge"><i class="fa-solid fa-layer-group"></i> Catalog & Showcase</span>
+        <h2>Our <span id="span4">Featured</span> Products</h2>
+        <p class="section-desc">
+          Browse our flagship collection of hand-picked premium electronics with verified authenticity and full local warranty.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="buttons-div">
+        <button class="buttons active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> All Products
+        </button>
+        <button class="buttons" data-filter="laptops">
+          <i class="fa-solid fa-laptop"></i> Laptops
+        </button>
+        <button class="buttons" data-filter="smartphones">
+          <i class="fa-solid fa-mobile-screen-button"></i> Smartphones
+        </button>
+        <button class="buttons" data-filter="audio">
+          <i class="fa-solid fa-headphones"></i> Audio & Sound
+        </button>
+        <button class="buttons" data-filter="wearables">
+          <i class="fa-solid fa-clock"></i> Smartwatches
+        </button>
+        <button class="buttons" data-filter="cameras">
+          <i class="fa-solid fa-camera"></i> Cameras
+        </button>
+      </div>
+
+      <!-- Live Search & Status Bar -->
+      <div class="portfolio-search-status">
+        <span id="results-count">Showing all products</span>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="boxes-container" id="products-grid">
+        
+        <!-- Product 1: Premium Laptop -->
+        <div class="box" data-category="laptops" data-name="Premium Sleek UltraBook" data-price="289999" data-original-price="319999" data-rating="4.9" data-reviews="142" data-img="./Pictures/premium_sleek_aluminum_laptop_for_professionals_high_end_design_studio_lighting.png" data-desc="High-performance ultra-thin laptop crafted with aviation-grade aluminum. Engineered for creators, engineers, and power users." data-specs="Intel Core i9 14th Gen • 32GB DDR5 • 1TB NVMe Gen4 • 4K OLED HDR Display • 14h Battery">
+          <div class="card-badge-top">
+            <span class="badge-flagship"><i class="fa-solid fa-crown"></i> Flagship</span>
+            <span class="badge-discount">-10%</span>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="./Pictures/premium_sleek_aluminum_laptop_for_professionals_high_end_design_studio_lighting.png"
+              alt="Premium Sleek UltraBook Laptop"
+              loading="lazy"
+            />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Laptops & Workstations</div>
+            <h3 class="product-title">UltraBook Pro Titanium</h3>
+            <p class="box-para1">
+              Next-gen computing power with ultra-responsive OLED display and all-day endurance.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-microchip"></i> i9 14th Gen</span>
+              <span><i class="fa-solid fa-memory"></i> 32GB RAM</span>
+              <span><i class="fa-solid fa-hard-drive"></i> 1TB SSD</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">289,999</span>
+                <span class="price-old">Rs 319,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.9 <small>(142)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Gaming Laptop Beast -->
+        <div class="box" data-category="laptops" data-name="Strix RTX Gaming Laptop" data-price="349999" data-original-price="389999" data-rating="4.8" data-reviews="98" data-img="./Pictures/laptop1.png" data-desc="Extreme gaming performance featuring high-refresh 240Hz screen, liquid metal cooling, and dedicated ray-tracing graphics." data-specs="AMD Ryzen 9 7945HX • RTX 4080 12GB • 32GB DDR5 • 2TB Gen4 SSD • RGB Mech Keyboard">
+          <div class="card-badge-top">
+            <span class="badge-hot"><i class="fa-solid fa-fire"></i> Best for Gaming</span>
+            <span class="badge-discount">-12%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/laptop1.png" alt="Strix RTX Gaming Laptop" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Gaming Laptops</div>
+            <h3 class="product-title">Strix RTX Gaming Beast</h3>
+            <p class="box-para1">
+              Conquer AAA titles with RTX ray-tracing graphics, 240Hz refresh rate, and RGB keyboard.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-microchip"></i> Ryzen 9</span>
+              <span><i class="fa-solid fa-vr-cardboard"></i> RTX 4080</span>
+              <span><i class="fa-solid fa-gauge-high"></i> 240Hz</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">349,999</span>
+                <span class="price-old">Rs 389,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.8 <small>(98)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Smartphone Pro -->
+        <div class="box" data-category="smartphones" data-name="Galaxy Ultra 5G Smartphone" data-price="249999" data-original-price="279999" data-rating="4.9" data-reviews="215" data-img="./Pictures/Mobile.png" data-desc="Revolutionary mobile computing with 200MP camera sensor, AI photography, Snapdragon 8 Gen 3, and stunning Dynamic AMOLED 2X display." data-specs="Snapdragon 8 Gen 3 • 12GB RAM • 512GB Storage • 200MP Quad Camera • 5000mAh 45W Fast Charging">
+          <div class="card-badge-top">
+            <span class="badge-trending"><i class="fa-solid fa-bolt"></i> Popular</span>
+            <span class="badge-discount">-11%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/Mobile.png" alt="Galaxy Ultra 5G Smartphone" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Smartphones & 5G</div>
+            <h3 class="product-title">Galaxy Ultra 5G AI Phone</h3>
+            <p class="box-para1">
+              Top-tier cinematic 200MP cameras, vivid 120Hz display, and all-day supercharged battery.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-camera"></i> 200MP AI</span>
+              <span><i class="fa-solid fa-mobile"></i> 120Hz AMOLED</span>
+              <span><i class="fa-solid fa-battery-full"></i> 5000mAh</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">249,999</span>
+                <span class="price-old">Rs 279,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.9 <small>(215)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Studio Wireless Headphone -->
+        <div class="box" data-category="audio" data-name="Sony WH-1000XM5 Studio ANC" data-price="78999" data-original-price="89999" data-rating="4.9" data-reviews="310" data-img="./Pictures/headphones.png" data-desc="Industry-leading noise cancellation headphones with custom audiophile drivers, 30 hours of playback, and multipoint Bluetooth connection." data-specs="Active Noise Cancellation (ANC) • 30h Playtime • LDAC Hi-Res Audio • 8 Microphones • Ultra Comfort Cushions">
+          <div class="card-badge-top">
+            <span class="badge-flagship"><i class="fa-solid fa-music"></i> Studio ANC</span>
+            <span class="badge-discount">-12%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/headphones.png" alt="Sony WH-1000XM5 ANC Headphones" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Hi-Fi Audio & Sound</div>
+            <h3 class="product-title">Sony WH-1000XM5 Studio</h3>
+            <p class="box-para1">
+              Immerse in crystal-clear acoustics with dual-processor noise cancellation and LDAC.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-ear-listen"></i> Pro ANC</span>
+              <span><i class="fa-solid fa-battery-half"></i> 30h Battery</span>
+              <span><i class="fa-solid fa-wave-square"></i> Hi-Res Sound</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">78,999</span>
+                <span class="price-old">Rs 89,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.9 <small>(310)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: PureSound Wireless Headphone -->
+        <div class="box" data-category="audio" data-name="PureSound Wireless Headphones" data-price="34999" data-original-price="42999" data-rating="4.7" data-reviews="128" data-img="./Pictures/headphone.png" data-desc="Deep bass wireless headphones with ergonomic memory foam earcups, foldable design, and low-latency gaming mode." data-specs="40mm Neodymium Drivers • 40h Battery Life • Bluetooth 5.3 • Quick 10m Charge = 5h Play • Built-in Mic">
+          <div class="card-badge-top">
+            <span class="badge-trending"><i class="fa-solid fa-tag"></i> Best Value</span>
+            <span class="badge-discount">-18%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/headphone.png" alt="PureSound Wireless Headphones" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Audio & Headphones</div>
+            <h3 class="product-title">PureSound Wireless Over-Ear</h3>
+            <p class="box-para1">
+              Ergonomic design with deep rich bass response and convenient foldable frame.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-music"></i> 40mm Drivers</span>
+              <span><i class="fa-solid fa-battery-full"></i> 40h Play</span>
+              <span><i class="fa-solid fa-bluetooth"></i> BT 5.3</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">34,999</span>
+                <span class="price-old">Rs 42,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.7 <small>(128)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Smart Watch Pro Titanium -->
+        <div class="box" data-category="wearables" data-name="Titanium Apex Smart Watch" data-price="29999" data-original-price="35999" data-rating="4.8" data-reviews="175" data-img="./Pictures/watch.png" data-desc="Premium fitness and health smartwatch with sapphire glass, heart rate/ECG tracker, dual GPS, and IP68 waterproof rating." data-specs="1.43' AMOLED Always-On • Titanium Case • ECG & SpO2 • Dual-Frequency GPS • 14 Days Battery">
+          <div class="card-badge-top">
+            <span class="badge-flagship"><i class="fa-solid fa-heart-pulse"></i> Pro Health</span>
+            <span class="badge-discount">-16%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/watch.png" alt="Titanium Apex Smart Watch" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Wearables & Health</div>
+            <h3 class="product-title">Titanium Apex Smartwatch</h3>
+            <p class="box-para1">
+              Precision health monitoring, standalone GPS tracking, and aerospace-grade chassis.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-heart-pulse"></i> ECG + SpO2</span>
+              <span><i class="fa-solid fa-location-crosshairs"></i> Dual GPS</span>
+              <span><i class="fa-solid fa-shield"></i> IP68 Water</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">29,999</span>
+                <span class="price-old">Rs 35,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.8 <small>(175)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Smart Watch Pro X -->
+        <div class="box" data-category="wearables" data-name="Smart Watch Pro X AMOLED" data-price="19999" data-original-price="25999" data-rating="4.9" data-reviews="190" data-img="./Pictures/smartwatch.png" data-desc="Sleek square AMOLED display with Bluetooth calling, 100+ sports tracking modes, and customizable watch faces." data-specs="1.96' AMOLED Display • Bluetooth HD Calling • 100+ Sports Modes • Sleep & Stress Tracking • 7 Days Battery">
+          <div class="card-badge-top">
+            <span class="badge-trending"><i class="fa-solid fa-phone"></i> BT Calling</span>
+            <span class="badge-discount">-23%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/smartwatch.png" alt="Smart Watch Pro X AMOLED" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Wearables & Sports</div>
+            <h3 class="product-title">Smart Watch Pro X Ultra</h3>
+            <p class="box-para1">
+              Ultra-wide AMOLED display with wireless calling, fitness insights, and fast charging.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-display"></i> 1.96" AMOLED</span>
+              <span><i class="fa-solid fa-person-running"></i> 100+ Modes</span>
+              <span><i class="fa-solid fa-phone-volume"></i> HD Calling</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">19,999</span>
+                <span class="price-old">Rs 25,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.9 <small>(190)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Bluetooth BoomBox Speaker -->
+        <div class="box" data-category="audio" data-name="BoomSound Bluetooth Speaker" data-price="18999" data-original-price="24999" data-rating="4.8" data-reviews="112" data-img="./Pictures/Bluetooth.png" data-desc="Portable wireless speaker delivering heavy bass, dynamic RGB party lights, and durable IPX7 waterproof housing." data-specs="30W RMS Power • 24h Playback • IPX7 Waterproof • RGB Light Sync • Powerbank Function">
+          <div class="card-badge-top">
+            <span class="badge-hot"><i class="fa-solid fa-water"></i> IPX7 Waterproof</span>
+            <span class="badge-discount">-24%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/Bluetooth.png" alt="BoomSound Bluetooth Speaker" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Portable Audio</div>
+            <h3 class="product-title">BoomSound Party Speaker</h3>
+            <p class="box-para1">
+              Thunderous bass, synchronised lighting modes, and all-weather rugged waterproof casing.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-volume-high"></i> 30W Bass</span>
+              <span><i class="fa-solid fa-water"></i> IPX7 Rugged</span>
+              <span><i class="fa-solid fa-battery-full"></i> 24h Play</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">18,999</span>
+                <span class="price-old">Rs 24,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.8 <small>(112)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: Echo Smart Home Speaker -->
+        <div class="box" data-category="audio" data-name="Echo 360 Smart Sound Speaker" data-price="22999" data-original-price="27999" data-rating="4.7" data-reviews="86" data-img="./Pictures/speaker.png" data-desc="Room-filling 360-degree high fidelity audio with built-in smart assistant, WiFi streaming, and smart home hub controls." data-specs="360° Omnidirectional Audio • WiFi & BT 5.2 • Voice Assistant Built-in • Multi-Room Sync • Smart Hub">
+          <div class="card-badge-top">
+            <span class="badge-flagship"><i class="fa-solid fa-house-signal"></i> Smart Hub</span>
+            <span class="badge-discount">-17%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/speaker.png" alt="Echo 360 Smart Sound Speaker" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Smart Home & Audio</div>
+            <h3 class="product-title">Echo 360° Smart Speaker</h3>
+            <p class="box-para1">
+              Immersive spatial room acoustic tuning with seamless multi-device smart home controls.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-satellite-dish"></i> 360° Sound</span>
+              <span><i class="fa-solid fa-wifi"></i> WiFi Stream</span>
+              <span><i class="fa-solid fa-microchip"></i> Smart AI</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">22,999</span>
+                <span class="price-old">Rs 27,999</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.7 <small>(86)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: Cinema DSLR Camera -->
+        <div class="box" data-category="cameras" data-name="EOS 4K Cinema DSLR Pro" data-price="189999" data-original-price="210000" data-rating="4.9" data-reviews="154" data-img="./Pictures/Camera.png" data-desc="Professional 4K HDR filming camera with full-frame CMOS sensor, ultra-fast eye tracking autofocus, and interchangeable lens mount." data-specs="45MP Full-Frame CMOS • 4K 120fps HDR Video • Dual Pixel CMOS AF II • 5-Axis In-Body Stabilization • Dual SD UHS-II">
+          <div class="card-badge-top">
+            <span class="badge-flagship"><i class="fa-solid fa-film"></i> 4K Cinema</span>
+            <span class="badge-discount">-10%</span>
+          </div>
+          <div class="image-wrapper">
+            <img src="./Pictures/Camera.png" alt="EOS 4K Cinema DSLR Pro" loading="lazy" />
+            <div class="card-overlay-actions">
+              <button class="quick-action-btn quick-view-btn" title="Quick Preview"><i class="fa-solid fa-eye"></i></button>
+              <button class="quick-action-btn add-wishlist-btn" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="box-content1">
+            <div class="product-category-tag">Pro Photography & Video</div>
+            <h3 class="product-title">EOS 4K Cinema DSLR Pro</h3>
+            <p class="box-para1">
+              Capture breathtaking details with full-frame sensor clarity, 4K 120fps video, and dual stabilization.
+            </p>
+            <div class="product-specs-chips">
+              <span><i class="fa-solid fa-camera"></i> 45MP Full</span>
+              <span><i class="fa-solid fa-video"></i> 4K 120fps</span>
+              <span><i class="fa-solid fa-crosshairs"></i> Eye Tracking</span>
+            </div>
+            <div class="price-rating-row">
+              <div class="price-wrapper">
+                <span class="currency">Rs</span>
+                <span class="price-current">189,999</span>
+                <span class="price-old">Rs 210,000</span>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-span">4.9 <small>(154)</small></span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <button class="box1-btn view-details-trigger">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="add-to-cart-direct-btn" title="Add to Cart">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Custom Innovations & Project Builds Showcase -->
+    <section class="innovations-section">
+      <div class="innovations-header">
+        <span class="sub-heading-badge"><i class="fa-solid fa-microchip"></i> Engineered Solutions</span>
+        <h2>Custom Projects & <span class="accent-text">Innovations</span></h2>
+        <p class="section-desc">
+          Beyond retail, we architect bespoke enterprise setups, custom gaming battle stations, and integrated smart home infrastructure.
+        </p>
+      </div>
+
+      <div class="innovations-grid">
+        <div class="innovation-card">
+          <div class="innovation-img-wrapper">
+            <img src="./Pictures/image2.jpg" alt="Custom Water-Cooled Workstation" />
+            <div class="innovation-tag">Custom Rig</div>
+          </div>
+          <div class="innovation-content">
+            <h3>Enterprise AI & 3D Render Rig</h3>
+            <p>Custom liquid-cooled multi-GPU workstation built for 3D animation, VFX rendering, and local LLM deep learning workloads.</p>
+            <ul class="innovation-specs-list">
+              <li><i class="fa-solid fa-check"></i> Dual RTX 4090 24GB GPUs</li>
+              <li><i class="fa-solid fa-check"></i> 128GB DDR5 ECC RAM</li>
+              <li><i class="fa-solid fa-check"></i> Custom Loop Hard-Tube Cooling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="innovation-card">
+          <div class="innovation-img-wrapper">
+            <img src="./Pictures/image3.jpg" alt="Acoustic Smart Studio Setup" />
+            <div class="innovation-tag">Smart Setup</div>
+          </div>
+          <div class="innovation-content">
+            <h3>Audiophile Studio & Smart Automation</h3>
+            <p>Complete smart acoustic room treatment, reference monitors integration, and centralized smart control panel installation.</p>
+            <ul class="innovation-specs-list">
+              <li><i class="fa-solid fa-check"></i> 360° Studio Sound Calibration</li>
+              <li><i class="fa-solid fa-check"></i> Smart Voice & App Automation</li>
+              <li><i class="fa-solid fa-check"></i> Zero-Latency Audio Interface</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- CTA Section -->
+    <section id="cta-section">
+      <div class="cta-container">
+        <span class="cta-pill"><i class="fa-solid fa-headset"></i> Need Custom Configurations?</span>
+        <h2 class="cta-title">Can't find what you're looking for?</h2>
+        <p class="cta-desc">
+          We stock over 5,000+ specialized electronics, spare parts, and custom enterprise components. Contact our technical team for immediate quotes.
+        </p>
+        <div class="cta-buttons">
+          <a href="index.html#Featured-Products" class="explore-btn primary-glow">
+            <i class="fa-solid fa-compass"></i> Explore All Categories
+          </a>
+          <a href="Services.html" class="cta-secondary-btn">
+            <i class="fa-solid fa-phone"></i> Contact Support
+          </a>
+        </div>
+      </div> 
+    </section>
+
+    <!-- Interactive Product Quick View Modal -->
+    <div id="product-modal" class="modal-backdrop">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modal-close" title="Close Modal">&times;</button>
+        <div class="modal-grid">
+          <div class="modal-image-col">
+            <img id="modal-img" src="" alt="Product Preview" />
+            <div class="modal-badge" id="modal-badge">Flagship</div>
+          </div>
+          <div class="modal-details-col">
+            <span class="modal-category" id="modal-category">Electronics</span>
+            <h2 id="modal-title" class="modal-title">Product Name</h2>
+            
+            <div class="modal-rating-row">
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span id="modal-rating" class="rating-span">4.9 (120)</span>
+              </div>
+              <span class="stock-status in-stock"><i class="fa-solid fa-circle-check"></i> In Stock & Ready to Ship</span>
+            </div>
+
+            <div class="modal-price-row">
+              <span class="modal-currency">Rs</span>
+              <span id="modal-price" class="modal-price-val">0</span>
+              <span id="modal-old-price" class="modal-old-price-val">Rs 0</span>
+            </div>
+
+            <p id="modal-desc" class="modal-desc">Product description goes here.</p>
+
+            <div class="modal-specs-box">
+              <h4><i class="fa-solid fa-list-check"></i> Key Specifications:</h4>
+              <p id="modal-specs" class="modal-specs-text"></p>
+            </div>
+
+            <div class="modal-actions-row">
+              <div class="quantity-picker">
+                <button class="qty-btn" id="qty-minus">-</button>
+                <input type="number" id="qty-input" value="1" min="1" max="10" />
+                <button class="qty-btn" id="qty-plus">+</button>
+              </div>
+              <button class="modal-add-cart-btn" id="modal-add-to-cart">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+              </button>
+            </div>
+
+            <div class="modal-perks">
+              <span><i class="fa-solid fa-shield"></i> 1-Year Official Warranty</span>
+              <span><i class="fa-solid fa-truck"></i> Free Express Shipping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-container">
+      <i class="fa-solid fa-circle-check toast-icon"></i>
+      <div class="toast-text">
+        <h4 id="toast-title">Success!</h4>
+        <p id="toast-msg">Item added to your cart.</p>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+      <!--Footer Container-->
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Electro <span class="span-footer">Hub</span></h3>
+          <p class="footer-para">
+            Your trusted destination for premium electronics. Discover laptops,
+            smartphones, smart watches, headphones, speakers, and accessories at
+            the best prices with exceptional customer service.
+          </p>
+        </div>
+        <div class="footer-col height">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#main-container4">Why ElectroHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col height">
+          <h3>PRODUCTS</h3>
+          <ul>
+            <li><a href="#featured-section">Laptops & Workstations</a></li>
+            <li><a href="#featured-section">Smart Watches</a></li>
+            <li><a href="#featured-section">Speakers & Audio</a></li>
+            <li><a href="#featured-section">Headphones</a></li>
+            <li><a href="#featured-section">Cameras & Video</a></li>
+          </ul>
+        </div>
+        <div class="footer-col height">
+          <h4>CONTACT US</h4>
+          <ul>
+            <li>📍 Peshawar, Khyber Pakhtunkhwa, Pakistan</li>
+            <li>📞 +92 300 1234567</li>
+            <li>✉ info@electrohub.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="special-icons">
+        <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f socials"></i></a>
+        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram socials"></i></a>
+        <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in socials"></i></a>
+        <a href="#" class="social-link" title="X Twitter"><i class="fa-brands fa-x-twitter socials"></i></a>
+        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube socials"></i></a>
+      </div>
+      <hr class="hr2" />
+      <div class="copy">
+        <p>© 2026 ElectroHub. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+  </body>
 </html>
