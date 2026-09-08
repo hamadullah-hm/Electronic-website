@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const initElectroHub = () => {
     // ========================================================
     // 0. Ultra-Aesthetic Cyber Preloader System (Fast, Smooth & Non-Blocking)
     // ========================================================
@@ -41,15 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
             preloader.classList.add("loaded");
             document.body.classList.remove("preloader-active");
 
-            // Trigger entrance animations
-            document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up, .reveal-zoom").forEach(el => {
-                el.classList.add("reveal-active");
-            });
-
             setTimeout(() => {
                 preloader.style.display = "none";
                 preloader.style.visibility = "hidden";
             }, 500);
+
+            // Re-check and trigger scroll reveal for viewport elements
+            if (typeof initScrollReveal === "function") {
+                initScrollReveal();
+            }
         };
 
         // Smooth controlled progress timer (~1.2s duration)
@@ -321,19 +321,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ========================================================
-    // 5. Header Scroll Shadow & Blur Effect
-    // ========================================================
-    const header = document.getElementById("header");
-    if (header) {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 40) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        });
-    }
 
     // ========================================================
     // 6. Toast Notification System
@@ -669,4 +656,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 850);
         });
     }
-});
+};
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initElectroHub);
+} else {
+    initElectroHub();
+}

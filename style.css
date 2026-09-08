@@ -161,7 +161,7 @@ html {
 #navbar {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -175,37 +175,62 @@ html {
   font-weight: 500;
   font-size: 14.5px;
   position: relative;
-  padding: 8px 14px;
-  border-radius: 99px;
-  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 8px 10px 10px 10px;
   text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 #navbar li a i {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
+/* Blue Animated Underline */
+#navbar li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(90deg, #00f2fe 0%, #3d66f0 100%);
+  border-radius: 99px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 18px rgba(61, 102, 240, 0.5);
+}
+
+/* Hover Effect: Text turns blue & underline expands */
 #navbar li a:hover {
   color: #00f2fe;
-  background: rgba(0, 242, 254, 0.08);
 }
 
 #navbar li a:hover i {
   color: #00f2fe;
+  transform: translateY(-1px);
 }
 
+#navbar li a:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Active State */
 #navbar li a.active {
   color: #00f2fe;
   font-weight: 600;
-  background: rgba(0, 242, 254, 0.12);
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.18);
 }
 
 #navbar li a.active i {
   color: #00f2fe;
+}
+
+#navbar li a.active::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 /* Right Side Controls */
@@ -3553,37 +3578,50 @@ section[id],
 }
 
 /* ========================================================
-   CINEMATIC SCROLL REVEAL & ENTRANCE ANIMATIONS
+   CINEMATIC SCROLL REVEAL & ENTRANCE ANIMATIONS (LEFT-TO-RIGHT)
    ======================================================== */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
 .reveal-left,
 .reveal-right,
 .reveal-up,
 .reveal-zoom {
   opacity: 0;
   will-change: transform, opacity, filter;
-  transition: opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1),
-              transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1),
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.85s ease;
 }
 
 .reveal-left {
-  transform: translateX(-60px);
-  filter: blur(5px);
+  transform: translateX(-70px);
+  filter: blur(6px);
 }
 
 .reveal-right {
-  transform: translateX(60px);
-  filter: blur(5px);
+  transform: translateX(70px);
+  filter: blur(6px);
 }
 
 .reveal-up {
   transform: translateY(45px);
-  filter: blur(5px);
+  filter: blur(6px);
 }
 
 .reveal-zoom {
   transform: scale(0.9);
-  filter: blur(5px);
+  filter: blur(6px);
 }
 
 /* Active State when element enters viewport */
@@ -3594,11 +3632,47 @@ section[id],
 }
 
 /* Staggered Transition Delays */
-.reveal-delay-1 { transition-delay: 0.12s; }
-.reveal-delay-2 { transition-delay: 0.22s; }
-.reveal-delay-3 { transition-delay: 0.32s; }
-.reveal-delay-4 { transition-delay: 0.42s; }
-.reveal-delay-5 { transition-delay: 0.52s; }
+.reveal-delay-1 { transition-delay: 0.14s; }
+.reveal-delay-2 { transition-delay: 0.28s; }
+.reveal-delay-3 { transition-delay: 0.42s; }
+.reveal-delay-4 { transition-delay: 0.56s; }
+.reveal-delay-5 { transition-delay: 0.70s; }
+
+/* Immediate Hero Entrance Animations on Page Load / Entry */
+.hero-tagline-badge.reveal-left {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.hero-head.reveal-left {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.30s both;
+}
+
+.hero-para.reveal-left {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+.hero-btn-group.reveal-left {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.60s both;
+}
+
+.hero-highlights-strip.reveal-left {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+}
+
+/* Secondary Page Hero Sections (About, Services, Portfolio) */
+.hero-content2 h2,
+.hero2-head,
+.hero-head2,
+.hero-badge {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.hero-para1,
+.hero2-para,
+.hero-para2,
+.hero-stats-pill {
+  animation: slideInFromLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
+}
 
 /* Interactive Button Shine Sweep Effect */
 .shine-btn {
