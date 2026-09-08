@@ -52,84 +52,181 @@
 
     <!--Header Section Start-->
     <header id="header">
-        <!-- Modern SVG Tech Logo -->
-        <a href="#home" class="brand-logo" title="ElectroHub - Premium Tech Store">
-            <div class="logo-emblem">
-                <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="header-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#00f2fe"/>
-                            <stop offset="50%" stop-color="#3d66f0"/>
-                            <stop offset="100%" stop-color="#a855f7"/>
-                        </linearGradient>
-                    </defs>
-                    <polygon points="18,2 33,10.5 33,25.5 18,34 3,25.5 3,10.5" stroke="url(#header-logo-grad)" stroke-width="2.2" fill="rgba(61,102,240,0.15)"/>
-                    <path d="M18 7L18 12M10 14L14 16M26 14L22 16M18 24L18 29" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-                    <path d="M19.5 10L13.5 19H18.5L16.5 26L23.5 17H18.5L19.5 10Z" fill="url(#header-logo-grad)"/>
-                </svg>
-            </div>
-            <div class="logo-text-wrapper">
-                <span class="logo-main-text">Electro<span class="logo-accent">Hub</span></span>
-                <span class="logo-sub-tag">FLAGSHIP TECH</span>
-            </div>
-        </a>
+        <div class="header-inner">
+            <!-- Modern SVG Tech Logo -->
+            <a href="#home" class="brand-logo" title="ElectroHub - Premium Tech Store">
+                <div class="logo-emblem">
+                    <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="header-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00f2fe"/>
+                                <stop offset="50%" stop-color="#3d66f0"/>
+                                <stop offset="100%" stop-color="#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                        <polygon points="18,2 33,10.5 33,25.5 18,34 3,25.5 3,10.5" stroke="url(#header-logo-grad)" stroke-width="2.2" fill="rgba(61,102,240,0.15)"/>
+                        <path d="M18 7L18 12M10 14L14 16M26 14L22 16M18 24L18 29" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+                        <path d="M19.5 10L13.5 19H18.5L16.5 26L23.5 17H18.5L19.5 10Z" fill="url(#header-logo-grad)"/>
+                    </svg>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-main-text">Electro<span class="logo-accent">Hub</span></span>
+                    <span class="logo-sub-tag">FLAGSHIP TECH</span>
+                </div>
+            </a>
 
-        <!-- Main & Mobile Nav -->
-        <nav class="main-nav" id="main-nav">
-            <ul id="navbar">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#why-us" class="nav-link">Why Us</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <ul id="navbar">
+                    <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-circle-info"></i> <span>About</span></a></li>
+                    <li><a href="#services" class="nav-link"><i class="fa-solid fa-gears"></i> <span>Services</span></a></li>
+                    <li><a href="#portfolio" class="nav-link"><i class="fa-solid fa-microchip"></i> <span>Portfolio</span></a></li>
+                    <li><a href="#why-us" class="nav-link"><i class="fa-solid fa-shield-halved"></i> <span>Why Us</span></a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
 
-        <div class="right-side">
-            <div class="header-search-wrap">
-                <input type="text" placeholder="Search Products" class="search-box" id="global-search-input">
-                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+            <!-- Header Action Controls -->
+            <div class="right-side">
+                <!-- Search Box (Desktop & Tablet) -->
+                <div class="header-search-wrap">
+                    <input type="text" placeholder="Search Products" class="search-box" id="global-search-input" aria-label="Search tech products">
+                    <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                </div>
+
+                <!-- Wishlist Button with Live Counter Badge -->
+                <a href="#portfolio" class="action-btn-link wishlist-btn-link" title="My Wishlist" id="header-wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-badge-count">0</span>
+                </a>
+
+                <!-- Shopping Cart Button with Live Counter Badge -->
+                <a href="#portfolio" class="action-btn-link cart-btn-link" title="Shopping Cart" id="header-cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge-count">0</span>
+                </a>
+
+                <!-- 24/7 Support Helpline CTA Button -->
+                <a href="tel:+923001234567" class="header-support-btn shine-btn" title="Call 24/7 Support Helpline">
+                    <i class="fa-solid fa-headset"></i>
+                    <span class="support-text">Helpline</span>
+                </a>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Navigation" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
             </div>
-            <!-- Wishlist Button with Live Counter Badge -->
-            <a href="#portfolio" class="action-btn-link wishlist-btn-link" title="My Wishlist" id="header-wishlist-btn">
-                <i class="fa-regular fa-heart"></i>
-                <span class="wishlist-badge-count">0</span>
-            </a>
-            <!-- Shopping Cart Button with Live Counter Badge -->
-            <a href="#portfolio" class="action-btn-link cart-btn-link" title="Shopping Cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-badge-count">0</span>
-            </a>
-            <!-- 24/7 Support Helpline CTA Button -->
-            <a href="tel:+923001234567" class="header-support-btn shine-btn" title="Call 24/7 Support Helpline">
-                <i class="fa-solid fa-headset"></i>
-                <span class="support-text">Helpline</span>
-            </a>
-            <!-- Mobile Hamburger Menu Button -->
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Navigation">
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-            </button>
         </div>
+
+        <!-- Modern Cyber Mobile Navigation Drawer -->
+        <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+            <div class="drawer-header">
+                <div class="drawer-brand">
+                    <div class="logo-emblem">
+                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                            <polygon points="18,2 33,10.5 33,25.5 18,34 3,25.5 3,10.5" stroke="#00f2fe" stroke-width="2.2" fill="rgba(61,102,240,0.2)"/>
+                            <path d="M19.5 10L13.5 19H18.5L16.5 26L23.5 17H18.5L19.5 10Z" fill="#00f2fe"/>
+                        </svg>
+                    </div>
+                    <span class="logo-main-text">Electro<span class="logo-accent">Hub</span></span>
+                </div>
+                <button class="drawer-close-btn" id="mobile-menu-close" aria-label="Close Navigation Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Search Bar -->
+            <div class="drawer-search-wrap">
+                <input type="text" placeholder="Search gadgets, laptops, audio..." class="drawer-search-input" id="drawer-search-input">
+                <i class="fa-solid fa-magnifying-glass drawer-search-icon"></i>
+            </div>
+
+            <!-- Drawer Links List -->
+            <ul class="drawer-nav-list" id="drawer-nav-list">
+                <li><a href="#home" class="drawer-nav-link active"><i class="fa-solid fa-house"></i> <span>Home</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                <li><a href="#about" class="drawer-nav-link"><i class="fa-solid fa-circle-info"></i> <span>About Us</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                <li><a href="#services" class="drawer-nav-link"><i class="fa-solid fa-gears"></i> <span>Services</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                <li><a href="#portfolio" class="drawer-nav-link"><i class="fa-solid fa-microchip"></i> <span>Portfolio & Products</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                <li><a href="#why-us" class="drawer-nav-link"><i class="fa-solid fa-shield-halved"></i> <span>Why ElectroHub</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                <li><a href="#contact" class="drawer-nav-link"><i class="fa-solid fa-envelope"></i> <span>Contact Support</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+            </ul>
+
+            <!-- Drawer Bottom Quick Action Cards -->
+            <div class="drawer-footer-actions">
+                <a href="tel:+923001234567" class="drawer-helpline-card shine-btn">
+                    <div class="drawer-card-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="drawer-card-info">
+                        <span class="drawer-card-label">24/7 Helpline Support</span>
+                        <span class="drawer-card-value">+92 300 1234567</span>
+                    </div>
+                </a>
+
+                <div class="drawer-trust-badge">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>100% Genuine Official Tech • Local Warranty</span>
+                </div>
+            </div>
+        </aside>
     </header>
     <!-- Mobile Nav Backdrop Overlay -->
-    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" tabindex="-1"></div>
     <!--Header Section End-->
 
     <!-- 1. HERO / HOME SECTION -->
     <section id="home" class="scroll-target">
         <div id="hero-section">
+            <div class="hero-overlay-scrim"></div>
             <div class="hero-content">
                 <div class="hero-tagline-badge reveal-left">
+                    <span class="pulse-dot"></span>
                     <i class="fa-solid fa-bolt"></i> Future of Technology 2026
                 </div>
-                <h2 class="hero-head reveal-left reveal-delay-1">Best Electronic Store</h2>
-                <p class="hero-para reveal-left reveal-delay-2">Discover the latest laptops, smartphones, headphones, smart watches, and audio gear at unbeatable prices with 100% genuine local warranty.</p>
+                <h1 class="hero-head reveal-left reveal-delay-1">
+                    Best Electronic <span class="hero-gradient-text">Tech Store</span>
+                </h1>
+                <p class="hero-para reveal-left reveal-delay-2">
+                    Discover the latest laptops, smartphones, studio headphones, smartwatches, and high-fidelity audio gear at unbeatable prices with 100% genuine local warranty.
+                </p>
                 <div class="hero-btn-group reveal-left reveal-delay-3">
-                    <a href="#portfolio" class="button primary-btn shine-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="#about" class="button secondary-btn">Learn More</a>
+                    <a href="#portfolio" class="button primary-btn shine-btn">
+                        <span>Shop Flagship Tech</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="button secondary-btn">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Explore Story</span>
+                    </a>
+                </div>
+
+                <!-- Hero Trust Highlights Strip -->
+                <div class="hero-highlights-strip reveal-left reveal-delay-3">
+                    <div class="hero-trust-item">
+                        <div class="trust-icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="trust-text-box">
+                            <span class="trust-title">Express Delivery</span>
+                            <span class="trust-subtitle">24-48h Safe Dispatch</span>
+                        </div>
+                    </div>
+                    <div class="hero-trust-item">
+                        <div class="trust-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="trust-text-box">
+                            <span class="trust-title">Official Warranty</span>
+                            <span class="trust-subtitle">100% Genuine Tech</span>
+                        </div>
+                    </div>
+                    <div class="hero-trust-item">
+                        <div class="trust-icon-box"><i class="fa-solid fa-headset"></i></div>
+                        <div class="trust-text-box">
+                            <span class="trust-title">24/7 Tech Support</span>
+                            <span class="trust-subtitle">Expert Live Help</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

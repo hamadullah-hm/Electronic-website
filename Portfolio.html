@@ -55,33 +55,98 @@
 
     <!--Header Section Start-->
     <header id="header">
-      <h1 class="head1">Electro<span class="hub-class">Hub</span></h1>
-      <nav class="main-nav">
-        <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="./Services.html">Services</a></li>
-          <li><a href="./Portfolio.html">Portfolio</a></li>
-          <li><a href="">Team</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Testimonials</a></li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
+      <div class="header-inner">
+        <!-- Modern SVG Tech Logo -->
+        <a href="index.html" class="brand-logo" title="ElectroHub - Premium Tech Store">
+          <div class="logo-emblem">
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="18,2 33,10.5 33,25.5 18,34 3,25.5 3,10.5" stroke="#00f2fe" stroke-width="2.2" fill="rgba(61,102,240,0.15)"/>
+              <path d="M19.5 10L13.5 19H18.5L16.5 26L23.5 17H18.5L19.5 10Z" fill="#00f2fe"/>
+            </svg>
+          </div>
+          <div class="logo-text-wrapper">
+            <span class="logo-main-text">Electro<span class="logo-accent">Hub</span></span>
+            <span class="logo-sub-tag">FLAGSHIP TECH</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" id="main-nav">
+          <ul id="navbar">
+            <li><a href="index.html#home" class="nav-link"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+            <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> <span>About</span></a></li>
+            <li><a href="Services.html" class="nav-link"><i class="fa-solid fa-gears"></i> <span>Services</span></a></li>
+            <li><a href="Portfolio.html" class="nav-link active"><i class="fa-solid fa-microchip"></i> <span>Portfolio</span></a></li>
+            <li><a href="index.html#why-us" class="nav-link"><i class="fa-solid fa-shield-halved"></i> <span>Why Us</span></a></li>
+            <li><a href="index.html#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
+          </ul>
+        </nav>
 
         <div class="right-side">
-          <input type="text" placeholder="Search Products" class="search-box" />
-          <a href="#" title="Shopping Cart">
-            <i class="fa-solid fa-cart-shopping"></i>
+          <div class="header-search-wrap">
+            <input type="text" placeholder="Search Products" class="search-box" id="global-search-input" />
+            <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+          </div>
+          <a href="Portfolio.html" class="action-btn-link wishlist-btn-link" title="My Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="wishlist-badge-count">0</span>
           </a>
-          <i
-            class="fa-solid fa-circle-half-stroke"
-            id="grayscale-btn"
-            title="Toggle Black & White Mode"
-          ></i>
+          <a href="Portfolio.html" class="action-btn-link cart-btn-link" title="Shopping Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge-count">0</span>
+          </a>
+          <a href="tel:+923001234567" class="header-support-btn shine-btn" title="Call 24/7 Helpline">
+            <i class="fa-solid fa-headset"></i>
+            <span class="support-text">Helpline</span>
+          </a>
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
         </div>
-      </nav>
+      </div>
+
+      <!-- Cyber Mobile Navigation Drawer -->
+      <aside class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+          <div class="drawer-brand">
+            <div class="logo-emblem">
+              <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+                <polygon points="18,2 33,10.5 33,25.5 18,34 3,25.5 3,10.5" stroke="#00f2fe" stroke-width="2.2" fill="rgba(61,102,240,0.2)"/>
+                <path d="M19.5 10L13.5 19H18.5L16.5 26L23.5 17H18.5L19.5 10Z" fill="#00f2fe"/>
+              </svg>
+            </div>
+            <span class="logo-main-text">Electro<span class="logo-accent">Hub</span></span>
+          </div>
+          <button class="drawer-close-btn" id="mobile-menu-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="drawer-search-wrap">
+          <input type="text" placeholder="Search products..." class="drawer-search-input" id="drawer-search-input" />
+          <i class="fa-solid fa-magnifying-glass drawer-search-icon"></i>
+        </div>
+        <ul class="drawer-nav-list">
+          <li><a href="index.html#home" class="drawer-nav-link"><i class="fa-solid fa-house"></i> <span>Home</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+          <li><a href="about.html" class="drawer-nav-link"><i class="fa-solid fa-circle-info"></i> <span>About Us</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+          <li><a href="Services.html" class="drawer-nav-link"><i class="fa-solid fa-gears"></i> <span>Services</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+          <li><a href="Portfolio.html" class="drawer-nav-link active"><i class="fa-solid fa-microchip"></i> <span>Portfolio & Products</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+          <li><a href="index.html#why-us" class="drawer-nav-link"><i class="fa-solid fa-shield-halved"></i> <span>Why ElectroHub</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+          <li><a href="index.html#contact" class="drawer-nav-link"><i class="fa-solid fa-envelope"></i> <span>Contact Support</span> <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <a href="tel:+923001234567" class="drawer-helpline-card shine-btn">
+            <div class="drawer-card-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="drawer-card-info">
+              <span class="drawer-card-label">24/7 Helpline Support</span>
+              <span class="drawer-card-value">+92 300 1234567</span>
+            </div>
+          </a>
+        </div>
+      </aside>
     </header>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
     <!--Header End-->
 
     <!--Hero Section start-->

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // ========================================================
-    // 0. Ultra-Aesthetic Cyber Preloader System (Smooth & Controlled Speed)
+    // 0. Ultra-Aesthetic Cyber Preloader System (Fast, Smooth & Non-Blocking)
     // ========================================================
     const initPreloader = () => {
         const preloader = document.getElementById("preloader");
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const statusText = document.getElementById("loader-status");
 
         let progress = 0;
-        let isWindowLoaded = false;
         document.body.classList.add("preloader-active");
 
         const statusMessages = [
@@ -28,66 +27,57 @@ document.addEventListener("DOMContentLoaded", () => {
                 statusText.innerHTML = `${statusMessages[0]}<span class="dots"></span>`;
             } else if (currentProgress < 55) {
                 statusText.innerHTML = `${statusMessages[1]}<span class="dots"></span>`;
-            } else if (currentProgress < 80) {
+            } else if (currentProgress < 85) {
                 statusText.innerHTML = `${statusMessages[2]}<span class="dots"></span>`;
-            } else if (currentProgress < 99) {
+            } else if (currentProgress < 100) {
                 statusText.innerHTML = `${statusMessages[3]}<span class="dots"></span>`;
             } else {
                 statusText.innerHTML = `${statusMessages[4]} ✨`;
             }
         };
 
-        // Smooth controlled interval for ~2.5s duration
+        const dismissPreloader = () => {
+            if (preloader.classList.contains("loaded")) return;
+            preloader.classList.add("loaded");
+            document.body.classList.remove("preloader-active");
+
+            // Trigger entrance animations
+            document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up, .reveal-zoom").forEach(el => {
+                el.classList.add("reveal-active");
+            });
+
+            setTimeout(() => {
+                preloader.style.display = "none";
+                preloader.style.visibility = "hidden";
+            }, 500);
+        };
+
+        // Smooth controlled progress timer (~1.2s duration)
         const startTime = Date.now();
-        const targetDuration = 2400; // 2.4 seconds
+        const targetDuration = 1100;
 
         const loaderInterval = setInterval(() => {
             const elapsed = Date.now() - startTime;
-            const targetProgress = Math.min(100, (elapsed / targetDuration) * 100);
+            progress = Math.min(100, Math.floor((elapsed / targetDuration) * 100));
 
-            // Add slight natural easing variation
-            if (progress < targetProgress) {
-                progress += Math.max(0.6, (targetProgress - progress) * 0.25);
-            }
+            if (progressFill) progressFill.style.width = `${progress}%`;
+            if (percentageText) percentageText.innerText = progress;
+            updateStatus(progress);
 
-            if (progress >= 99.5 && isWindowLoaded) {
-                progress = 100;
+            if (progress >= 100) {
                 clearInterval(loaderInterval);
-
-                if (progressFill) progressFill.style.width = "100%";
-                if (percentageText) percentageText.innerText = "100";
                 updateStatus(100);
-
-                // Graceful pause at 100% so user appreciates complete load
-                setTimeout(() => {
-                    preloader.classList.add("loaded");
-                    document.body.classList.remove("preloader-active");
-
-                    // Trigger hero entrance animations immediately
-                    document.querySelectorAll("#home .reveal-left, #home .reveal-right, #home .reveal-up, #home .reveal-zoom").forEach(el => {
-                        el.classList.add("reveal-active");
-                    });
-
-                    setTimeout(() => {
-                        preloader.style.display = "none";
-                    }, 850);
-                }, 400);
-            } else {
-                const displayVal = Math.min(99, Math.floor(progress));
-                if (progressFill) progressFill.style.width = `${progress}%`;
-                if (percentageText) percentageText.innerText = displayVal;
-                updateStatus(displayVal);
+                setTimeout(dismissPreloader, 250);
             }
-        }, 30);
+        }, 20);
 
-        window.addEventListener("load", () => {
-            isWindowLoaded = true;
-        });
-
-        // Safety fallback to ensure loader always completes
+        // Absolute safety fallback (dismiss after 1.5s max unconditionally)
         setTimeout(() => {
-            isWindowLoaded = true;
-        }, 2200);
+            clearInterval(loaderInterval);
+            if (progressFill) progressFill.style.width = "100%";
+            if (percentageText) percentageText.innerText = "100";
+            dismissPreloader();
+        }, 1500);
     };
 
     initPreloader();
@@ -125,14 +115,27 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal();
 
     // ========================================================
-    // 2. Single Page ScrollSpy & Smooth Anchor Navigation
+    // 2. Header Scroll Glassmorphic Effects & ScrollSpy Navigation
     // ========================================================
-    const navLinks = document.querySelectorAll("#navbar .nav-link");
+    const header = document.getElementById("header");
+    const navLinks = document.querySelectorAll("#navbar .nav-link, .drawer-nav-link");
     const sections = document.querySelectorAll("section[id]");
+
+    const handleHeaderScroll = () => {
+        if (!header) return;
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    };
+
+    window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
 
     const highlightActiveNav = () => {
         let currentSectionId = "";
-        const scrollPosition = window.scrollY + 150;
+        const scrollPosition = window.scrollY + 160;
 
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
@@ -153,13 +156,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    window.addEventListener("scroll", highlightActiveNav);
+    window.addEventListener("scroll", highlightActiveNav, { passive: true });
 
     // Smooth scroll for all on-page hash links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
             const targetId = this.getAttribute("href");
-            if (targetId === "#") return;
+            if (targetId === "#" || !targetId.startsWith("#")) return;
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
@@ -170,33 +173,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
                 // Update active class immediately on click
-                navLinks.forEach(link => link.classList.remove("active"));
-                if (this.classList.contains("nav-link")) {
-                    this.classList.add("active");
-                }
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href") === targetId) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+
+                // Auto close mobile drawer if open
+                toggleMobileMenu(false);
             }
         });
     });
 
     // ========================================================
-    // 3. Mobile Navigation Drawer Controller
+    // 3. Cyber Mobile Navigation Drawer Controller
     // ========================================================
     const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
-    const navbar = document.getElementById("navbar");
+    const mobileDrawer = document.getElementById("mobile-drawer");
+    const mobileMenuCloseBtn = document.getElementById("mobile-menu-close");
     const mobileNavOverlay = document.getElementById("mobile-nav-overlay");
+    const navbar = document.getElementById("navbar");
 
     const toggleMobileMenu = (forceState) => {
-        if (!navbar) return;
-        const shouldOpen = forceState !== undefined ? forceState : !navbar.classList.contains("mobile-active");
+        const isCurrentlyOpen = (mobileDrawer && mobileDrawer.classList.contains("open")) || 
+                                (navbar && navbar.classList.contains("mobile-active"));
+        const shouldOpen = forceState !== undefined ? forceState : !isCurrentlyOpen;
 
         if (shouldOpen) {
-            navbar.classList.add("mobile-active");
-            if (mobileMenuBtn) mobileMenuBtn.classList.add("active");
+            if (mobileDrawer) mobileDrawer.classList.add("open");
+            if (navbar) navbar.classList.add("mobile-active");
+            if (mobileMenuBtn) {
+                mobileMenuBtn.classList.add("active");
+                mobileMenuBtn.setAttribute("aria-expanded", "true");
+            }
             if (mobileNavOverlay) mobileNavOverlay.classList.add("active");
             document.body.style.overflow = "hidden";
         } else {
-            navbar.classList.remove("mobile-active");
-            if (mobileMenuBtn) mobileMenuBtn.classList.remove("active");
+            if (mobileDrawer) mobileDrawer.classList.remove("open");
+            if (navbar) navbar.classList.remove("mobile-active");
+            if (mobileMenuBtn) {
+                mobileMenuBtn.classList.remove("active");
+                mobileMenuBtn.setAttribute("aria-expanded", "false");
+            }
             if (mobileNavOverlay) mobileNavOverlay.classList.remove("active");
             document.body.style.overflow = "";
         }
@@ -209,25 +229,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    if (mobileMenuCloseBtn) {
+        mobileMenuCloseBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMobileMenu(false);
+        });
+    }
+
     if (mobileNavOverlay) {
         mobileNavOverlay.addEventListener("click", () => {
             toggleMobileMenu(false);
         });
     }
 
-    // Auto-close mobile drawer when any link is clicked
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            toggleMobileMenu(false);
-        });
-    });
-
     // Close on Escape key
     document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && navbar && navbar.classList.contains("mobile-active")) {
+        if (e.key === "Escape") {
             toggleMobileMenu(false);
         }
     });
+
+    // Sync drawer search input with global search
+    const globalSearch = document.getElementById("global-search-input");
+    const drawerSearch = document.getElementById("drawer-search-input");
+    if (drawerSearch && globalSearch) {
+        drawerSearch.addEventListener("input", (e) => {
+            globalSearch.value = e.target.value;
+            globalSearch.dispatchEvent(new Event("input"));
+        });
+    }
 
     // ========================================================
     // 4. Wishlist State & Live Counter Synchronization
